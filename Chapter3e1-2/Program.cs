@@ -40,6 +40,13 @@ namespace Chapter3e1_2
                 Console.WriteLine();
                 Console.WriteLine("{0} rows", result.Count());
             }
+
+
+
+
+
+
+            
         }
     }
 }
