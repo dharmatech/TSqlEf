@@ -29,12 +29,7 @@ namespace Chapter3p104
 
                 Console.WriteLine();
                 Console.WriteLine("{0} rows", result.Count());
-            }
-
-
-
-
-            
+            }            
         }
     }
 }
