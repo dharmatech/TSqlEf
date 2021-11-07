@@ -1,7 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using TSqlEf;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using TSqlEf;
 
 namespace Chapter3p114
 {
@@ -79,7 +80,7 @@ namespace Chapter3p114
                         customer.Companyname,
                         orderid = order == null ? -1 : order.Orderid
                     });
-
+                                
                 foreach (var item in result)
                 {
                     Console.WriteLine("{0} {1} {2}", item.Custid, item.Companyname, item.orderid);
