@@ -33,23 +33,61 @@ namespace Chapter3e7
                 //        Orderdate = abc == null ? new DateTime() : abc.Orderdate
                 //    };
 
+                //var result =
+                //    from customer in db.Customers
+                //    join order in db.Orders
+                //    on
+                //    new
+                //    {
+                //        Key1 = customer.Custid,
+                //        Key2 = true
+                //    }
+                //    equals 
+                //    new
+                //    {
+                //        Key1 = order.Custid,
+                //        Key2 = order.Orderdate == new DateTime(2016, 2, 12)
+                //    }                    
+                //    into Abc
+                //    from abc in Abc.DefaultIfEmpty()
+                //    select new
+                //    {
+                //        customer.Custid,
+                //        customer.Companyname,
+                //        Orderid = abc == null ? -1 : abc.Orderid,
+                //        Orderdate = abc == null ? new DateTime() : abc.Orderdate
+                //    };
+
+
+
+                // cly's suggestion to use
+                //   where order.Orderdate == new DateTime(2016, 2, 12)
+                //
+                // Not sure where to inser the where clause. 
+
+                //var result =
+                //    from customer in db.Customers
+                //    join order in db.Orders
+                //    on
+                //    customer.Custid equals order.Custid
+                //    into Abc 
+                //    from abc in Abc.DefaultIfEmpty()
+
+                //    select new
+                //    {
+                //        customer.Custid,
+                //        customer.Companyname,
+                //        Orderid = abc == null ? -1 : abc.Orderid,
+                //        Orderdate = abc == null ? new DateTime() : abc.Orderdate
+                //    };
+
                 var result =
                     from customer in db.Customers
                     join order in db.Orders
-                    on
-                    new
-                    {
-                        Key1 = customer.Custid,
-                        Key2 = true
-                    }
-                    equals 
-                    new
-                    {
-                        Key1 = order.Custid,
-                        Key2 = order.Orderdate == new DateTime(2016, 2, 12)
-                    }                    
+                    on customer.Custid equals order.Custid
                     into Abc
                     from abc in Abc.DefaultIfEmpty()
+                    where abc.Orderdate == new DateTime(2016, 2, 12)
                     select new
                     {
                         customer.Custid,
@@ -58,10 +96,10 @@ namespace Chapter3e7
                         Orderdate = abc == null ? new DateTime() : abc.Orderdate
                     };
 
-                //foreach (var item in result)
-                //{
-                //    Console.WriteLine("{0}", item.Empid);
-                //}
+                foreach (var item in result)
+                {
+                    Console.WriteLine("{0} {1} {2}", item.Custid, item.Companyname, item.Orderid, item.Orderdate);
+                }
 
                 Console.WriteLine();
                 Console.WriteLine("{0} rows", result.Count());
