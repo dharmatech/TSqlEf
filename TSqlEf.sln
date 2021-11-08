@@ -1,33 +1,35 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31702.278
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSqlEf", "TSqlEf\TSqlEf.csproj", "{6A03586E-5A4F-4203-8FB4-55CC5CA2CFF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TSqlEf", "TSqlEf\TSqlEf.csproj", "{6A03586E-5A4F-4203-8FB4-55CC5CA2CFF2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter2", "Chapter2\Chapter2.csproj", "{6A0150EB-3640-4C29-A9EB-CE695549B9D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chapter2", "Chapter2\Chapter2.csproj", "{6A0150EB-3640-4C29-A9EB-CE695549B9D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter2p35", "Chapter2p35\Chapter2p35.csproj", "{41D672C9-11E9-436E-98DD-FC7B845B6BF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chapter2p35", "Chapter2p35\Chapter2p35.csproj", "{41D672C9-11E9-436E-98DD-FC7B845B6BF2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter2p40", "Chapter2p40\Chapter2p40.csproj", "{580AC312-1E84-482F-BF98-8007D5ECF587}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chapter2p40", "Chapter2p40\Chapter2p40.csproj", "{580AC312-1E84-482F-BF98-8007D5ECF587}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter2p48", "Chapter2p48\Chapter2p48.csproj", "{7F847CA2-FB17-43AE-BCF1-DFA9F8CFBE2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chapter2p48", "Chapter2p48\Chapter2p48.csproj", "{7F847CA2-FB17-43AE-BCF1-DFA9F8CFBE2F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter3p104", "Chapter3p104\Chapter3p104.csproj", "{E6DF2BF1-AD59-49D7-AE65-487AD95E9472}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chapter3p104", "Chapter3p104\Chapter3p104.csproj", "{E6DF2BF1-AD59-49D7-AE65-487AD95E9472}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter3p114", "Chapter3p114\Chapter3p114.csproj", "{2EBCB833-502C-49FE-A63C-4F23B99A5A2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chapter3p114", "Chapter3p114\Chapter3p114.csproj", "{2EBCB833-502C-49FE-A63C-4F23B99A5A2E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueryProjectTemplate", "QueryProjectTemplate\QueryProjectTemplate.csproj", "{A14F1706-7DF0-4D31-84CF-DE7463206BAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueryProjectTemplate", "QueryProjectTemplate\QueryProjectTemplate.csproj", "{A14F1706-7DF0-4D31-84CF-DE7463206BAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter3p113", "Chapter3p113\Chapter3p113.csproj", "{46AAD41A-E8D2-4C01-A170-92C3127DD3CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chapter3p113", "Chapter3p113\Chapter3p113.csproj", "{46AAD41A-E8D2-4C01-A170-92C3127DD3CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter3e1-1", "Chapter3e1-1\Chapter3e1-1.csproj", "{601470C9-A0D0-4646-AF32-AA7456BA77C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chapter3e1-1", "Chapter3e1-1\Chapter3e1-1.csproj", "{601470C9-A0D0-4646-AF32-AA7456BA77C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter3e1-2", "Chapter3e1-2\Chapter3e1-2.csproj", "{BFEECDAA-E5A7-483C-B973-50562EC9C7BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chapter3e1-2", "Chapter3e1-2\Chapter3e1-2.csproj", "{BFEECDAA-E5A7-483C-B973-50562EC9C7BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter3e3", "Chapter3e3\Chapter3e3.csproj", "{EE00102A-6AFE-43E3-A0B8-525669E3D128}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chapter3e3", "Chapter3e3\Chapter3e3.csproj", "{EE00102A-6AFE-43E3-A0B8-525669E3D128}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter3e4", "Chapter3e4\Chapter3e4.csproj", "{34A86CDE-04AA-49E8-8BC4-1E39FEAE6763}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chapter3e4", "Chapter3e4\Chapter3e4.csproj", "{34A86CDE-04AA-49E8-8BC4-1E39FEAE6763}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter3e7", "Chapter3e7\Chapter3e7.csproj", "{BD6D4E1A-A3B8-4953-8AFB-8352DC2D9675}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{34A86CDE-04AA-49E8-8BC4-1E39FEAE6763}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34A86CDE-04AA-49E8-8BC4-1E39FEAE6763}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34A86CDE-04AA-49E8-8BC4-1E39FEAE6763}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD6D4E1A-A3B8-4953-8AFB-8352DC2D9675}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD6D4E1A-A3B8-4953-8AFB-8352DC2D9675}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD6D4E1A-A3B8-4953-8AFB-8352DC2D9675}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD6D4E1A-A3B8-4953-8AFB-8352DC2D9675}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
