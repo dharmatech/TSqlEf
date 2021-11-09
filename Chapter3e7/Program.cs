@@ -11,6 +11,10 @@ namespace Chapter3e7
         {
             using (var db = new TSQLV4Context())
             {
+                // See this post regarding this query:
+                //
+                // https://stackoverflow.com/questions/69890853/ef-core-multiple-join-conditions-causing-cs1941
+
                 // SELECT C.custid, C.companyname, O.orderid, O.orderdate
                 // FROM Sales.Customers AS C
                 //   LEFT OUTER JOIN Sales.Orders AS O
@@ -81,13 +85,48 @@ namespace Chapter3e7
                 //        Orderdate = abc == null ? new DateTime() : abc.Orderdate
                 //    };
 
+                //var result =
+                //    from customer in db.Customers
+                //    join order in db.Orders
+                //    on customer.Custid equals order.Custid
+                //    into Abc
+                //    from abc in Abc.DefaultIfEmpty()
+                //    where 
+                //    abc.Orderdate == new DateTime(2016, 2, 12)
+                //    select new
+                //    {
+                //        customer.Custid,
+                //        customer.Companyname,
+                //        Orderid = abc == null ? -1 : abc.Orderid,
+                //        Orderdate = abc == null ? new DateTime() : abc.Orderdate
+                //    };
+
+                //var result =
+                //    from customer in db.Customers
+                //    join order in db.Orders
+                //    on customer.Custid equals order.Custid
+                //    into Abc
+                //    from abc in Abc.DefaultIfEmpty()
+                //    where
+                //    customer.Custid == abc.Custid && abc.Orderdate == new DateTime(2016, 2, 12)
+                //    select new
+                //    {
+                //        customer.Custid,
+                //        customer.Companyname,
+                //        Orderid = abc == null ? -1 : abc.Orderid,
+                //        Orderdate = abc == null ? new DateTime() : abc.Orderdate
+                //    };
+
+                // Charlieface suggestion
+                //
+                // https://stackoverflow.com/a/69892036/268581
+
                 var result =
                     from customer in db.Customers
                     join order in db.Orders
                     on customer.Custid equals order.Custid
                     into Abc
-                    from abc in Abc.DefaultIfEmpty()
-                    where abc.Orderdate == new DateTime(2016, 2, 12)
+                    from abc in Abc.Where(abc => abc.Orderdate == new DateTime(2016, 2, 12)).DefaultIfEmpty()
                     select new
                     {
                         customer.Custid,
@@ -98,7 +137,11 @@ namespace Chapter3e7
 
                 foreach (var item in result)
                 {
-                    Console.WriteLine("{0} {1} {2}", item.Custid, item.Companyname, item.Orderid, item.Orderdate);
+                    Console.WriteLine("{0,3} {1} {2,6} {3,10}", 
+                        item.Custid, 
+                        item.Companyname, 
+                        item.Orderid == -1 ? "NULL" : item.Orderid, 
+                        item.Orderid == -1 ? "NULL" : item.Orderdate.ToString("yyyy-MM-dd"));
                 }
 
                 Console.WriteLine();
