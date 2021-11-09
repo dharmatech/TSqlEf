@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using TSqlEf;
@@ -67,7 +68,7 @@ namespace Chapter3e7
                 // cly's suggestion to use
                 //   where order.Orderdate == new DateTime(2016, 2, 12)
                 //
-                // Not sure where to inser the where clause. 
+                // Not sure where to insert the where clause. 
 
                 //var result =
                 //    from customer in db.Customers
