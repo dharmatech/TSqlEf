@@ -19,7 +19,7 @@ namespace Chapter4p139
                 // 
                 //         FROM Sales.Orders
                 //         WHERE Sales.Orders.custid = O1.custid
-                // 	)
+                //     )
 
                 var result = db.Orders.Where(order =>
                     order.Orderid
