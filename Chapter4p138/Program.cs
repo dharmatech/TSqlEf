@@ -44,12 +44,6 @@ namespace Chapter4p138
                 Console.WriteLine();
                 Console.WriteLine("{0} rows", result.Count());
             }
-
-
-
-
-
-            
         }
     }
 }
